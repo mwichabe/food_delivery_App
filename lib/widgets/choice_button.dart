@@ -30,7 +30,7 @@ class ChoiceButton extends StatelessWidget {
           gradient: hasGradient?
           LinearGradient(
               colors: [themeData().primaryColorDark,
-                themeData().primaryColorLight]
+                Colors.red]
           ):
           null,
           shape: BoxShape.circle,
