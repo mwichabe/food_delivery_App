@@ -4,6 +4,7 @@ import 'package:food_delivery/blocs/swipeBloc/swipe_bloc.dart';
 import 'package:food_delivery/blocs/swipeBloc/swipe_event.dart';
 import 'package:food_delivery/models/userModel.dart';
 import 'package:food_delivery/screens/homeScreen.dart';
+import 'package:food_delivery/screens/onBoarding/on_boarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,9 +21,10 @@ class MyApp extends StatelessWidget {
         ],
         child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: 'home',
+        initialRoute: 'onBoard',
         routes: {
           'home': (context)=> const HomeScreen(),
+          'onBoard': (context)=> const OnBoardingScreen(),
         },
     ),
       );

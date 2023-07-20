@@ -43,31 +43,34 @@ class Profile extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 60),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ChoiceButton(
-                          width: 80,
-                          height: 80,
-                          size: 30,
-                          color: Colors.red,
-                          hasGradient: false,
-                          icon: CupertinoIcons.clear),
-                      ChoiceButton(
-                          width: 80,
-                          height: 80,
-                          size: 30,
-                          color: Colors.white,
-                          hasGradient: true,
-                          icon: Icons.favorite),
-                      ChoiceButton(
-                          width: 80,
-                          height: 80,
-                          size: 30,
-                          color: Colors.black,
-                          hasGradient: false,
-                          icon: Icons.watch_later),
-                    ],
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ChoiceButton(
+                            width: 80,
+                            height: 80,
+                            size: 30,
+                            color: Colors.red,
+                            hasGradient: false,
+                            icon: CupertinoIcons.clear),
+                        ChoiceButton(
+                            width: 80,
+                            height: 80,
+                            size: 30,
+                            color: Colors.white,
+                            hasGradient: true,
+                            icon: Icons.favorite),
+                        ChoiceButton(
+                            width: 80,
+                            height: 80,
+                            size: 30,
+                            color: Colors.black,
+                            hasGradient: false,
+                            icon: Icons.watch_later),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -85,6 +88,7 @@ class Profile extends StatelessWidget {
                 Text(user.bio,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.normal,fontSize: 14),),
                 const Text('Interests',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),),
                 SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:
